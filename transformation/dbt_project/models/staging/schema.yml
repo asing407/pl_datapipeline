@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: pl_pipeline
+    database: pl_pipeline
+    schema: raw
+    tables:
+      - name: raw_matches
+
+models:
+  - name: stg_matches
+    description: "Cleaned and standardized Premier League 2023/24 matches"
+    columns:
+      - name: match_date
+        tests:
+          - not_null
+      - name: home_goals
+        tests:
+          - not_null
+      - name: away_goals
+        tests:
+          - not_null

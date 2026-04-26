@@ -1,22 +1,55 @@
 version: 2
 
-sources:
-  - name: pl_pipeline
-    database: pl_pipeline
-    schema: raw
-    tables:
-      - name: raw_matches
-
 models:
   - name: stg_matches
     description: "Cleaned and standardized Premier League 2023/24 matches"
     columns:
-      - name: match_date
+      - name: match_id
+        description: "Unique match identifier"
+        tests:
+          - unique
+          - not_null
+      
+      - name: home_team
+        description: "Home team name"
         tests:
           - not_null
+      
+      - name: away_team
+        description: "Away team name"
+        tests:
+          - not_null
+      
       - name: home_goals
+        description: "Goals scored by home team"
         tests:
           - not_null
+      
       - name: away_goals
+        description: "Goals scored by away team"
         tests:
           - not_null
+      
+      - name: match_date
+        description: "Date the match was played"
+        tests:
+          - not_null
+      
+      - name: winner
+        description: "Match winner or Draw"
+        tests:
+          - not_null
+
+sources:
+  - name: pl_pipeline
+    database: pl_pipeline
+    schema: raw
+    description: "Raw Premier League data loaded into Snowflake"
+    tables:
+      - name: raw_matches
+        description: "Raw match results from API"
+        columns:
+          - name: match_id
+            tests:
+              - unique
+              - not_null

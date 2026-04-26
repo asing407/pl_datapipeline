@@ -29,17 +29,14 @@ A production-grade data pipeline that ingests, transforms, and visualizes Premie
 ---
 
 ## Architecture
-┌─────────────────┐      ┌──────────────┐      ┌─────────────┐      ┌──────────────┐
-│   REST API      │ ───▶ │  PostgreSQL  │ ───▶ │  Snowflake  │ ───▶ │   Streamlit  │
-│  (380 matches)  │      │   (Staging)  │      │ (Warehouse) │      │  Dashboard   │
-└─────────────────┘      └──────────────┘      └─────────────┘      └──────────────┘
-│
+
+   REST API      ───▶   PostgreSQL  ───▶  Snowflake   ───▶ Streamlit  
+  (380 matches)          (Staging)        (Warehouse)      Dashboard            
+
 ▼
-┌─────────────────┐
-│  dbt Transform  │
-│  (4 models +    │
-│   10 tests)     │
-└─────────────────┘
+
+ dbt Transform  
+(4 models + 10 tests)     
 
 ---
 

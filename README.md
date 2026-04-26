@@ -54,37 +54,6 @@ A production-grade data pipeline that ingests, transforms, and visualizes Premie
 
 ---
 
-## Project Structure
-pl_datapipeline/
-├── ingestion/
-│   ├── api_client.py          # REST API data fetcher
-│   ├── load_to_postgres.py    # PostgreSQL loader
-│   └── load_to_snowflake.py   # Snowflake uploader
-│
-├── transformation/
-│   └── dbt_project/
-│       ├── models/
-│       │   ├── staging/
-│       │   │   ├── stg_matches.sql
-│       │   │   └── schema.yml      # Data quality tests
-│       │   └── marts/
-│       │       ├── team_standings.sql
-│       │       ├── high_scoring_matches.sql
-│       │       └── home_away_performance.sql
-│       ├── dbt_project.yml
-│       └── profiles.yml
-│
-├── dashboard/
-│   └── dashboard_streamlit.py   # Interactive analytics UI
-│
-├── orchestration/
-│   └── airflow_dag.py           # Pipeline scheduler
-│
-└── docs/
-└── dbt_lineage_graph.png    # Data lineage visualization
-
----
-
 ## Data Pipeline Flow
 
 ### **Data Ingestion** (Python)

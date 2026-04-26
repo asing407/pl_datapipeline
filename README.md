@@ -30,12 +30,12 @@ A production-grade data pipeline that ingests, transforms, and visualizes Premie
 
 ## Architecture
 
-   REST API      ───▶   PostgreSQL  ───▶  Snowflake   ───▶ Streamlit  
-  (380 matches)          (Staging)        (Warehouse)      Dashboard            
+   REST API (380 matches)     ───▶   PostgreSQL (Staging)   ───▶  Snowflake (Warehouse)   ───▶ Streamlit (Dashboard)
+                              
 
-▼
+   ▼
 
- dbt Transform  
+   dbt Transform  
 (4 models + 10 tests)     
 
 ---

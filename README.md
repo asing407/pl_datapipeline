@@ -251,9 +251,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Anshumaan Singh**
 - Email: anshumaansingh407@gmail.com
 - LinkedIn: [Anshumaan Singh](https://linkedin.com/in/anshumaansingh98)
-- GitHub: [@yasing407](https://github.com/asing407)
+- GitHub: [@asing407](https://github.com/asing407)
 - Dashboard: [Live Dashboard](https://pldatapipeline.streamlit.app/)
-- 
 ---
 
 ## Acknowledgments

@@ -2,3 +2,8 @@ requests
 psycopg2-binary
 pandas
 python-dotenv
+streamlit
+snowflake-connector-python
+plotly
+python-dotenv
+numpy
